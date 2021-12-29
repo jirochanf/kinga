@@ -9,15 +9,11 @@
 <body>
     <a-scene embedded arjs="debugUIEnabled:false;" renderer="gammaOutput: true;" vr-mode-ui="enabled: false">
         <a-assets>
-            <a-asset-item id="ｂｅｎｚ" src="assets/ｂｅｎｚ．glｔｆ"></a-asset-item>
+            <a-asset-item id="model" src="ａｓｓｅｔs/benz.glb"></a-asset-item>
         </a-assets>
 
-        <a-entity scale="1 1 1" rotaion="0 0 0" position="0 0.4 -3" animation-mixer="clip:*"
-            gltf-model="#ｂｅｎｚ" visible="true"
-            animation="property: position; from: 0 0.5 -3; to: 0 0.8 -3; dir: alternate; dur: 1800; easing: easeInOutQuad; loop: true">
+        <a-entity scale="1 1 1" position="0 0.4 -3" animation-mixer="clip:*" gltf-model="#model" visible="true">
         </a-entity>
-
-        </a-obj-model>
 
         <a-light type="ambient" color="#ffffff"></a-light>
         <a-light type="point" intensity="2" position="0 4 0"></a-light>
