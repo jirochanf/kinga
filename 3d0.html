@@ -1,17 +1,10 @@
 <!doctype html>
 <html>
     <head>
-        <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-        <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
-        <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
-        <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-detector.js"></script>
-        <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-handler.js"></script>
-	    <!-- Loads <model-viewer> for modern browsers: -->
-<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"></script>
-<!-- Loads <model-viewer> for old browsers like IE11: -->
-<script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
-	    
-	    
+	<!-- Loads <model-viewer> for modern browsers: -->
+	<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"></script>
+	<!-- Loads <model-viewer> for old browsers like IE11: -->
+	<script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
     </head>
 
     <body style="margin: 0; overflow: hidden;">
@@ -24,26 +17,11 @@
             embedded
             gesture-detector
         >
-	   <a-assets>
-                <a-asset-item
-                    id="animated-asset"
-                    src="assets/benz.gltf"
-                ></a-asset-item>
-            </a-assets>
          
 	<model-viewer preload poster="assets/maker.gif" src="assets/benz.gltf" ios-src="assets/chair_swan.usdz" 
 		      auto-rotate camera-controls ar alt="サンプル"></model-viewer>	
 		
 
-               <a-entity
-                    id="bowser-model"
-                    scale="0.8 0.8 0.8"
-                          position="1 0 0"
-                    animation-mixer="loop: repeat"
-                    gltf-model="#animated-asset"
-                    class="clickable"
-                    gesture-handler
-                ></a-entity>
             </a-marker>　
 	 <a-entity camera></a-entity>
 
