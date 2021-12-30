@@ -6,17 +6,23 @@
 <body style='margin:0px; overflow:hidden;'>
 <!-- A-FrameにAR.jsを紐づける、ARマーカーのパターンレシオを設定 -->
 <a-scene embedded arjs="debugUIEnabled:false;trackingMethod:best;patternRatio:0.90;" vr-mode-ui="enabled: false">
-    <a-assets>
-        <!-- 3Dオブジェクトを設定 -->
-        <a-asset-item id="benz" src="assets/benz.gftl"></a-asset-item>
+   
+ <!-- 3Dオブジェクトを設定 -->
+    <a-assets timeout="10000">
+	<a-asset-item id="benz_gltf" src="assets/benz.gltf"></a-asset-item>
     </a-assets>
+    
     <!-- 自作したARマーカーを指定 -->
     <a-marker type="pattern" url="syako.patt">
+
+  <!-- 3Dオブジェクトを配置 -->      
+ <a-gltf-model src="#benz_gltf" position="0 0.4 -1" rotation="0 -20 0"></a-gltf-model>       
         
-  <a-entity scale=“0.8 0.8 0”.8 position=“0 0.4 -3" animation-mixer="clip:*" gltf-model="#benz" visible="true">
-        </a-entity>
+       
     </a-marker>
-    <a-entity camera></a-entity>
-</a-scene>
+
+<a-entity camera></a-entity>
+
+    </a-scene>
 </body>
 </html>
