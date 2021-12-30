@@ -26,8 +26,21 @@
             </a-assets>
           
             <a-camera id="my_camera">
-			<a-cursor></a-cursor>
-				<a-entity
+			<a-cursor></a-cursor>　
+		</a-camera>
+		
+
+	<a-marker
+                id="animated-marker"
+                type="pattern"
+                preset="custom"
+                url="assets/syako.patt"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+                id="markerA"
+            >
+		    <a-entity
                     id="bowser-model"
                     scale="0.4 0.4 0.4"
                           position="5 5 -5"
@@ -37,7 +50,7 @@
                     gesture-handler>
 		 </a-entity>
 		
-		</a-camera>
+	　　　　　　　</a-marker>　　
 		
             <a-entity camera></a-entity>
         </a-scene>
