@@ -1,25 +1,32 @@
-<!doctype HTML>
-<html>
-<!-- ライブラリの読み込み -->
-<script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
-<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.2/aframe/build/aframe-ar.js"></script>
-<body style='margin:0px; overflow:hidden;'>
-<!-- A-FrameにAR.jsを紐づける、ARマーカーのパターンレシオを設定 -->
-<a-scene embedded arjs="debugUIEnabled:false;trackingMethod:best;patternRatio:0.90;" vr-mode-ui="enabled: false">
-   
- <!-- 3Dオブジェクトを設定 -->
-    <a-assets timeout="10000">
-	<a-asset-item id="benz_gltf" src="assets/benz.gltf"></a-asset-item>
-    </a-assets>
-    
-    <!-- 自作したARマーカーを指定 -->
-    <a-marker type="pattern" url="syako.patt"></a-marker>
 
-  <!-- 3Dオブジェクトを配置 -->      
- <a-gltf-model src="#benz_gltf" position="0 0.4 -1" rotation="0 -20 0"></a-gltf-model>       
- 
-<a-entity camera></a-entity>
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>ModerlViewerを使ったWebARページ</title>
+  </head>
+  <body>
+  <script 
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js">
 
-    </a-scene>
-</body>
+  </script>
+
+    <model-viewer  
+    ar
+    alt="chairモデル"
+    src="assets/benz.gltf" 
+    ios-src="assets/chair_swan.usdz" 
+
+    style="width:800px;height:1000px;"                  
+
+    background-color="#70BCD1"
+    shadow-intensity="0.7"
+    camera-controls
+    interaction-prompt="auto"
+    auto-rotate ar magic-leap>
+
+
+    </model-viewer>
+  </body>
 </html>
