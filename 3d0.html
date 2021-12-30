@@ -6,6 +6,12 @@
         <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
         <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-detector.js"></script>
         <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-handler.js"></script>
+	    <!-- Loads <model-viewer> for modern browsers: -->
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"></script>
+<!-- Loads <model-viewer> for old browsers like IE11: -->
+<script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+	    
+	    
     </head>
 
     <body style="margin: 0; overflow: hidden;">
@@ -25,16 +31,10 @@
                 ></a-asset-item>
             </a-assets>
          
-		<a-marker
-                id="animated-marker"
-                type="pattern"
-                preset="custom"
-                url="assets/syako.patt"
-                raycaster="objects: .clickable"
-                emitevents="true"
-                cursor="fuse: false; rayOrigin: mouse;"
-                id="markerA"
-            >
+	<model-viewer preload poster="assets/maker.gif" src="assets/benz.gltf" ios-src="assets/chair_swan.usdz" 
+		      auto-rotate camera-controls ar alt="サンプル"></model-viewer>	
+		
+
                <a-entity
                     id="bowser-model"
                     scale="0.8 0.8 0.8"
