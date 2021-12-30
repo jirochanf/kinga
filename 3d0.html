@@ -11,9 +11,9 @@
 <body>
 	<a-scene stats loading-screen="dotsColor: gray; backgroundColor: lightgray">
 		
-		<!-- Sky, Emvironment -->
-		<a-sky color="#ECECEC"></a-sky>
-		<a-entity environment="preset: default; dressingAmount: 30"></a-entity>
+		<a-camera id="my_camera">
+			<a-cursor></a-cursor>
+		</a-camera>
 
 		<!-- Assets -->
 		<a-assets timeout="30000">
