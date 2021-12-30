@@ -18,9 +18,7 @@
             embedded
             gesture-detector
         >
-		
-		
-            <a-assets>
+	   <a-assets>
                 <a-asset-item
                     id="animated-asset"
                     src="assets/benz.gltf"
@@ -29,20 +27,18 @@
           
             <a-camera id="my_camera">
 			<a-cursor></a-cursor>
-		</a-camera>
-		
-                <a-entity
+				<a-entity
                     id="bowser-model"
                     scale="0.4 0.4 0.4"
                           position="5 5 -5"
                     animation-mixer="loop: repeat"
                     gltf-model="#animated-asset"
                     class="clickable"
-                    gesture-handler
-                ></a-entity>
-
-            
-            
+                    gesture-handler>
+		 </a-entity>
+		
+		</a-camera>
+		
             <a-entity camera></a-entity>
         </a-scene>
     </body>
