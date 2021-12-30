@@ -18,6 +18,8 @@
             embedded
             gesture-detector
         >
+		
+		
             <a-assets>
                 <a-asset-item
                     id="animated-asset"
@@ -25,7 +27,10 @@
                 ></a-asset-item>
             </a-assets>
           
-            
+            <a-camera id="my_camera">
+			<a-cursor></a-cursor>
+		</a-camera>
+		
                 <a-entity
                     id="bowser-model"
                     scale="0.4 0.4 0.4"
@@ -36,9 +41,7 @@
                     gesture-handler
                 ></a-entity>
 
-            <a-camera id="my_camera">
-			<a-cursor></a-cursor>
-		</a-camera>
+            
             
             <a-entity camera></a-entity>
         </a-scene>
