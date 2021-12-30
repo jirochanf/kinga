@@ -1,25 +1,42 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-	<meta charset="UTF-8"/>
-	<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <head>
+        <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
         <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
         <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
         <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-detector.js"></script>
         <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-handler.js"></script>
-	</head>
-<body>
-	</a-scene>
-	
+    </head>
 
-		<!-- Assets -->
-		<a-assets timeout="30000">
-			<a-asset-item id="benz_gltf" src="./assets/benz.gltf"></a-asset-item>
-		</a-assets>
+    <body style="margin: 0; overflow: hidden;">
+        <a-scene
+            vr-mode-ui="enabled: false;"
+            loading-screen="enabled: false;"
+            renderer="logarithmicDepthBuffer: true;"
+            arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;"
+            id="scene"
+            embedded
+            gesture-detector
+        >
+            <a-assets>
+                <a-asset-item
+                    id="animated-asset"
+                    src="assets/benz.gltf"
+                ></a-asset-item>
+            </a-assets>
+          
+            
+                <a-entity
+                    id="bowser-model"
+                    scale="0.8 0.8 0.8"
+                          position="2 -2 -2"
+                    animation-mixer="loop: repeat"
+                    gltf-model="#animated-asset"
+                    class="clickable"
+                    gesture-handler
+                ></a-entity>
 
-		<!-- GLTF, Obj -->
-		<a-gltf-model src="#benz_gltf" position="1 1 -1" rotation="0 -20 0"></a-gltf-model>
-
-	</a-scene>
-</body>
+            <a-entity camera></a-entity>
+        </a-scene>
+    </body>
 </html>
