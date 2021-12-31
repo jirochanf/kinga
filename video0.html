@@ -9,6 +9,10 @@
 
     <body style="margin: 0; overflow: hidden;">
         <a-scene>
+            <a-camera id="my_camera">
+			<a-cursor></a-cursor>
+		    </a-camera>
+            
              <a-assets>
                 <video
                     id="vid"
@@ -35,9 +39,7 @@
                     gesture-handler
                           
                 ></a-video>
-             
-         <a-entity camera></a-entity>
-        
+      
         </a-scene>
     </body>
 </html>
