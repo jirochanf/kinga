@@ -32,20 +32,7 @@
                 ></video>
             </a-assets>
 
-            <a-marker
-                type="pattern"
-                preset="custom"
-                url="assets/marker2.patt"
-                videohandler
-                smooth="true"
-                smoothCount="10"
-                smoothTolerance="0.01"
-                smoothThreshold="5"
-                raycaster="objects: .clickable"
-                emitevents="true"
-                cursor="fuse: false; rayOrigin: mouse;"
-                id="markerA"
-            >
+            
                 <a-video
                     src="#vid"
                     scale="1 1 1"
@@ -54,9 +41,7 @@
                     class="clickable"
                     gesture-handler
                 ></a-video>
-            </a-marker>
-
-            <a-entity camera></a-entity>
+             <a-entity camera></a-entity>
         </a-scene>
     </body>
 </html>
