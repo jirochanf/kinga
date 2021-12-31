@@ -9,11 +9,7 @@
 
     <body style="margin: 0; overflow: hidden;">
         <a-scene>
-            <a-camera id="my_camera">
-			<a-cursor></a-cursor>
-		    </a-camera>
-            
-             <a-assets>
+		<a-assets>
                 <video
                     id="vid"
                     src="assets/asset.mp4"
@@ -28,8 +24,11 @@
                     >
                  </video>
               </a-assets>
-            
-                 <a-video
+		
+            <a-camera id="my_camera">
+			<a-cursor></a-cursor>
+	
+		<a-video
                     src="#vid" 
                           width="4" height="2.25"
                     scale="0.5 0.5 0.5"
@@ -40,6 +39,12 @@
                           
                 ></a-video>
       
+		
+		</a-camera>
+            
+             
+            
+                 
         </a-scene>
     </body>
 </html>
