@@ -9,16 +9,9 @@
     </head>
 
     <body style="margin: 0; overflow: hidden;">
-        <a-scene
-            vr-mode-ui="enabled: false"
-            loading-screen="enabled: false;"
-            arjs='sourceType: webcam; debugUIEnabled: false;'
-            id="scene"
-            embedded
-            gesture-detector
-        >
-                      <a-entity camera></a-entity>
-            
+         
+            <a-scene embedded arjs>
+         <a-marker>   
             <a-assets>
                 <video
                     id="vid"
@@ -41,7 +34,9 @@
                     class="clickable"
                     gesture-handler
                 ></a-video>
-   
+             </marker>
+   <a-entity camera></a-entity>
+            
         </a-scene>
     </body>
 </html>
