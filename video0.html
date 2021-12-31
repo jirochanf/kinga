@@ -5,31 +5,10 @@
         <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
         <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-detector.js"></script>
         <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-handler.js"></script>
-        <script>
-            AFRAME.registerComponent('videohandler', {
-                init: function () {
-                    var box = this.el;
-                    this.vid = document.querySelector("#vid");
-
-                    box.addEventListener('markerFound', function () {
-                        this.toggle = true;
-                        this.vid.play();
-                    }.bind(this));
-
-                    box.addEventListener('markerLost', function () {
-                        this.toggle = true;
-                        this.vid.play();
-                    }.bind(this));
-                },
-            });
-        </script>
-    </head>
+     </head>
 
     <body style="margin: 0; overflow: hidden;">
-        <a-scene
-            
-        >
-            
+        <a-scene>
              <a-assets>
                 <video
                     id="vid"
@@ -42,9 +21,10 @@
                     autoplay
                     muted
                     playsinline
-                ></video>
-            </a-assets>
-
+                    >
+                 </video>
+              </a-assets>
+            
                  <a-video
                     src="#vid"
                      width="16" height="9"    
@@ -54,9 +34,9 @@
                     class="clickable"
                     gesture-handler
                 ></a-video>
-           </a-box> 
-           
-            <a-entity camera></a-entity>
+             
+         <a-entity camera></a-entity>
+        
         </a-scene>
     </body>
 </html>
