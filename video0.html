@@ -8,15 +8,15 @@
         <script>
             AFRAME.registerComponent('videohandler', {
                 init: function () {
-                    var marker = this.el;
+                    var box = this.el;
                     this.vid = document.querySelector("#vid");
 
-                    marker.addEventListener('markerFound', function () {
+                    box.addEventListener('markerFound', function () {
                         this.toggle = true;
                         this.vid.play();
                     }.bind(this));
 
-                    marker.addEventListener('markerLost', function () {
+                    box.addEventListener('markerLost', function () {
                         this.toggle = true;
                         this.vid.play();
                     }.bind(this));
@@ -34,6 +34,8 @@
             embedded
             gesture-detector
         >
+            
+            <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"> 
             <a-assets>
                 <video
                     id="vid"
@@ -49,7 +51,7 @@
                 ></video>
             </a-assets>
 
-            
+          
                 <a-video
                     src="#vid"
                     scale="1 1 1"
@@ -58,6 +60,7 @@
                     class="clickable"
                     gesture-handler
                 ></a-video>
+           </a-box> 
            
             <a-entity camera></a-entity>
         </a-scene>
