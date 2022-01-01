@@ -18,8 +18,8 @@
                     }.bind(this));
 
                     marker.addEventListener('markerLost', function () {
-                        this.toggle = false;
-                        this.vid.pause();
+                        this.toggle = true;
+                        this.vid.play();
                     }.bind(this));
                 },
             });
