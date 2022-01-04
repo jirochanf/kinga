@@ -1,5 +1,5 @@
 <script src='https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js'></script>
-<!--
+
 <style>
   .arjs-loader {
     height: 100%;
@@ -19,7 +19,7 @@
     font-size: 1.25em;
     color: white;
   }
-</style> -->
+</style> 
 
 <!-- rawgithack development URL -->
 <script src='https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js'></script>
@@ -54,13 +54,13 @@
         embedded arjs='trackingMethod: best; sourceType: webcam; debugUIEnabled: false;'>
 
         <a-assets>
-          <video id="ozuhata" autoplay muted loop="true" src="assets/asset.mp4"></video>
+          <video id="ozuhata" autoplay muted loop="true" src="./assets/ozuhata.mp4"></video>
         </a-assets>
 
         <!-- use rawgithack to retrieve the correct url for nft marker (see 'pinball' below) -->
         <a-nft
             type='nft'
-            url='nft-marker/images/ozujo'
+            url='./nft-marker/images/ozujo'
             smooth='true'
             smoothCount='10'
             smoothTolerance='0.01'
