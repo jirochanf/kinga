@@ -13,8 +13,18 @@
       src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js">
 
   </script>
-
-  
+   
+    <a-scene
+            vr-mode-ui="enabled: false;"
+            loading-screen="enabled: false;"
+            renderer="logarithmicDepthBuffer: true;"
+            arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;"
+            id="scene"
+            embedded
+            gesture-detector
+        >
+         <a-entity camera></a-entity>
+ 
     <model-viewer  
     ar
     alt="chairモデル"
@@ -28,8 +38,8 @@
     camera-controls
     interaction-prompt="auto"
     auto-rotate ar magic-leap>
-
     </model-viewer>
  
+     </a-scene> 
   </body>
 </html>
